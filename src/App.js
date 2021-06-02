@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import Cart from "./Cart/Cart";
-import Header from "./Layout/Header";
-import Meals from "./Meals/Meals";
+import Cart from "./Components/Cart/Cart";
+import Header from "./Components/Layout/Header";
+import Meals from "./Components/Meals/Meals";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       {cartIsShown && <Cart onClose={hideCartHeader} />}
-      <Header onShowCart={showCartHeader}/>
+      <Header onShowCart={showCartHeader} />
       <main>
         <Meals />
       </main>
